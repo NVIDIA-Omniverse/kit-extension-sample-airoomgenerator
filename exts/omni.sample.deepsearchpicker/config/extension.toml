@@ -1,0 +1,40 @@
+[package]
+# Semantic Versioning is used: https://semver.org/
+version = "1.0.0"
+
+# The title and description fields are primarily for displaying extension info in UI
+title = "DeepSearch Swap"
+description="The simplest python extension example. Use it as a starting point for your extensions."
+
+# Path (relative to the root) or content of readme markdown file for UI.
+readme  = "docs/README.md"
+
+# URL of the extension source repository.
+repository = ""
+
+# One of categories for UI.
+category = "Example"
+
+# Keywords for the extension
+keywords = ["kit", "example"]
+
+# Icon to show in the extension manager
+icon = "data/icon.png"
+
+# Preview to show in the extension manager
+preview_image = "data/preview.png"
+
+# Use omni.ui to build simple UI
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.kit.ngsearch" = {}
+
+# Main python module this extension provides, it will be publicly available as "import company.hello.world".
+[[python.module]]
+name = "omni.sample.deepsearchpicker"
+
+[[test]]
+# Extra dependencies only to be used during test run
+dependencies = [
+    "omni.kit.ui_test" # UI testing extension
+]

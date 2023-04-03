@@ -1,0 +1,14 @@
+# all folders starting with _ are local
+_*/
+
+.DS_Store
+**/.vscode/ipch
+
+# byte-compiled python files
+*.py[cod]
+
+/.vs
+
+/app
+
+/exts/omni.sample.genaidemo/omni/sample/genaidemo/apikeys.py
