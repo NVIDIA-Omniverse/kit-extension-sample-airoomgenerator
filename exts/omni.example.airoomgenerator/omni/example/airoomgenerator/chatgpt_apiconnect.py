@@ -87,11 +87,7 @@ async def call_Generate(prim_info, prompt, use_chatgpt, use_deepsearch, response
     if use_deepsearch:
         settings = carb.settings.get_settings()
         nucleus_path = settings.get_as_string("deepsearch_nucleus_path")
-        
-            # nucleusPath = "omniverse://ov-simready/"
-            # prop_paths = ["/Projects/simready_content/common_assets/props/",
-            #             "/NVIDIA/Assets/Isaac/2022.2.1/Isaac/Robots/",
-            #             "/NVIDIA/Assets/Isaac/2022.1/NVIDIA/Assets/ArchVis/Residential/Furniture/"]
+      
 
         queries = list()                        
         for item in objects:
