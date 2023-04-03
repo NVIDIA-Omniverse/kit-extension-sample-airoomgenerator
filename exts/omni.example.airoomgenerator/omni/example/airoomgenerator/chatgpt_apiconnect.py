@@ -86,14 +86,15 @@ async def call_Generate(prim_info, prompt, use_chatgpt, use_deepsearch, response
 
     if use_deepsearch:
         settings = carb.settings.get_settings()
-        nucleus_path = settings.get_as_string("deepsearch_nucleus_path")
-      
-
+        nucleus_path = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/deepsearch_nucleus_path")
+        filter_path = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/filter_path")
+        filter_paths = filter_path.split(',')
+        
         queries = list()                        
         for item in objects:
             queries.append(item['object_name'])
 
-        query_result = await query_items(queries=queries, url=nucleus_path, paths="")
+        query_result = await query_items(queries=queries, url=nucleus_path, paths=filter_paths)
         if query_result is not None:
             place_deepsearch_results(
                 gpt_results=objects,

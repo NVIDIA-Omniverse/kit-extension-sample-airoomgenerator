@@ -73,24 +73,29 @@ class GenAIWindow(ui.Window):
         carb.log_info(values)
 
         settings = carb.settings.get_settings()
-        settings.set_string("APIKey", values["APIKey"])
-        settings.set_string("deepsearch_nucleus_path", values["deepsearch_nucleus_path"])
+        settings.set_string("/persistent/exts/omni.example.airoomgenerator/APIKey", values["APIKey"])
+        settings.set_string("/persistent/exts/omni.example.airoomgenerator/deepsearch_nucleus_path", values["deepsearch_nucleus_path"])
+        settings.set_string("/persistent/exts/omni.example.airoomgenerator/path_filter", values["path_filter"])
 
         dialog.hide()
 
     def _open_settings(self):
         settings = carb.settings.get_settings()   
-        apikey_value = settings.get_as_string("APIKey")
-        nucleus_path = settings.get_as_string("deepsearch_nucleus_path")
+        apikey_value = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/APIKey")
+        nucleus_path = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/deepsearch_nucleus_path")
+        path_filter = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/path_filter")
 
         if apikey_value == "":
             apikey_value = "Enter API Key Here"
         if nucleus_path == "":
             nucleus_path = "(ENTERPRISE ONLY) Enter Nucleus Path Here"
+        if path_filter == "":
+            path_filter = ""
 
         field_defs = [
             FormDialog.FieldDef("APIKey", "API Key: ", ui.StringField, apikey_value),
-            FormDialog.FieldDef("deepsearch_nucleus_path", "Nucleus Path: ", ui.StringField, nucleus_path)
+            FormDialog.FieldDef("deepsearch_nucleus_path", "Nucleus Path: ", ui.StringField, nucleus_path),
+            FormDialog.FieldDef("path_filter", "Path Filter: ", ui.StringField, path_filter)
         ]        
 
         dialog = FormDialog(

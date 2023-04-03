@@ -3,8 +3,8 @@
 version = "1.0.0"
 
 # The title and description fields are primarily for displaying extension info in UI
-title = "Simple Gen AI Demo"
-description="The simplest python extension example. Use it as a starting point for your extensions."
+title = "AI Room Generator Sample"
+description="Generates Rooms using ChatGPT"
 
 # Path (relative to the root) or content of readme markdown file for UI.
 readme  = "docs/README.md"
@@ -19,7 +19,7 @@ category = "Example"
 keywords = ["kit", "example"]
 
 # Icon to show in the extension manager
-icon = "data/icon.png"
+icon = "data/preview_icon.png"
 
 # Preview to show in the extension manager
 preview_image = "data/preview.png"
