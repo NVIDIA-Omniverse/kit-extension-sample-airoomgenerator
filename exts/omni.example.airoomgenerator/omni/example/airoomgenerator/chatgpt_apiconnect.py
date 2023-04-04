@@ -25,7 +25,7 @@ async def chatGPT_call(prompt: str):
     # Load your API key from an environment variable or secret management service
     settings = carb.settings.get_settings()
     
-    apikey = settings.get_as_string("APIKey")
+    apikey = settings.get_as_string("/persistent/exts/omni.example.airoomgenerator/APIKey")
     my_prompt = prompt.replace("\n", " ")
     
     # Send a request API
