@@ -26,7 +26,6 @@ async def query_items(queries, url: str, paths):
         if query_result is not None:
             result.append(query_result)
         
-    print(result)
     return result
 
 async def _query_first(query: str, url: str, paths):
