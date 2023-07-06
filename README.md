@@ -9,6 +9,8 @@ This extension allows user's to generate 3D content using Generative AI, ChatGPT
 ### [README](exts/omni.example.airoomgenerator)
 See the [README for this extension](exts/omni.example.airoomgenerator) to learn more about it including how to use it.
 
+> This sample is for educational purposes. For production please consider best security practices and scalability.
+
 ## Adding This Extension
 
 This folder is ready to be pushed to any git repository. Once pushed direct link to a git repository can be added to *Omniverse Kit* extension search paths.
