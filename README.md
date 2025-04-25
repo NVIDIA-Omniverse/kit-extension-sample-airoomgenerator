@@ -1,3 +1,9 @@
+## :warning: Deprecation Notice
+
+**This repository will be removed on May 26, 2025.**
+
+Please see [USD Code](https://build.nvidia.com/nvidia/usdcode), [USD Search](https://build.nvidia.com/nvidia/usdsearch), and the [Synthetic Data Generation with Generative AI Reference Workflow documentation](https://docs.omniverse.nvidia.com/guide-sdg/latest/index.html) for content related to AI based Omniverse development.
+
 # AI Room Generator Extension Sample
 
 ![Extension Preview](exts/omni.example.airoomgenerator/data/preview.png)
